@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/dashboard"
+        android:title="@string/dashboard"
+        android:icon="@drawable/ic_account_balance_wallet_white_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/target_tabungan"
+        android:title="@string/target_tabungan"
+        android:icon="@drawable/ic_monetization_on_white_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:icon="@drawable/ic_empty_24dp"
+        android:title="empty"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/laporan"
+        android:title="@string/laporan"
+        android:icon="@drawable/ic_poll_white_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/setting"
+        android:title="@string/pengaturan"
+        android:icon="@drawable/ic_settings_white_24dp"
+        app:showAsAction="always"
+        />
+</menu>

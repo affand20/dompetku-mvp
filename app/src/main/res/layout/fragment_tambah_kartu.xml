@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Kartu"
+        android:id="@+id/title_dialog"
+        android:layout_marginTop="25dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/default_text"
+        android:layout_marginBottom="16dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/card_background"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:id="@+id/card"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sisa Saldo"
+                android:textColor="@android:color/white"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="Mandiri"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:id="@+id/card_name"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/card_accessories"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="17dp"
+                android:layout_below="@id/card_name"
+                android:id="@+id/accessories"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rp 2.000.000"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="27sp"
+                android:text="@string/default_nominal_format"
+                android:layout_below="@id/accessories"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/nominal"
+                />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleDrawable="@drawable/ic_empty_24dp"
+        android:hint="Nama kartu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+        app:boxStrokeColor="@color/fresh"
+        app:boxStrokeWidth="3dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/nama_kartu"
+            android:textColor="@color/fresh"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleDrawable="@drawable/ic_empty_24dp"
+        android:hint="Nominal"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+        app:boxStrokeColor="@color/fresh"
+        app:boxStrokeWidth="3dp"
+        android:layout_marginTop="16dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/nominal_kartu"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="@color/fresh"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Submit"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/submit"
+        android:visibility="gone"
+        />
+</LinearLayout>

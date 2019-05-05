@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dompetku</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="target_tabungan">Target Tabungan</string>
+    <string name="pengaturan">Pengaturan</string>
+    <string name="laporan">Laporan</string>
+
+    <string name="default_nominal_format">Rp%1d</string>
+    <string name="sisa_saldo">Sisa Saldo %1d</string>
+</resources>

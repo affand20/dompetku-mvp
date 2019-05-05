@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Pengeluaran"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/default_text"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/title_transaksi"
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPaddingTop="16dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="8dp"
+            app:contentPaddingRight="16dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="16dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/uncategorized"
+                    android:id="@+id/kategori_icon"
+                    android:layout_marginRight="6dp"
+                    />
+                <RelativeLayout
+                    android:layout_toEndOf="@id/kategori_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penyetan Bu Mimit"
+                        android:textSize="17sp"
+                        android:id="@+id/judul_transaksi"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/judul_transaksi"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/tanggal_transaksi"
+                        android:text="Sabtu, 27 Oktober 2018"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pengeluaran"
+                    android:textStyle="bold"
+                    android:text="Rp0"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/nominal_transaksi"
+                    />
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_marginBottom="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kategori_terpilih"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_kategori"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleDrawable="@drawable/ic_empty_24dp"
+            android:hint="Judul"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+            app:boxStrokeColor="@color/fresh"
+            app:boxStrokeWidth="3dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/judul"
+                android:maxLines="1"
+                android:maxLength="21"
+                android:textColor="@color/fresh"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleDrawable="@drawable/ic_empty_24dp"
+            android:hint="Nominal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+            app:boxStrokeColor="@color/fresh"
+            app:boxStrokeWidth="3dp"
+            android:layout_marginTop="16dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/nominal"
+                android:inputType="number"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:textColor="@color/fresh"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleDrawable="@drawable/ic_empty_24dp"
+            android:hint="Tanggal"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlineBox"
+            app:boxStrokeColor="@color/fresh"
+            app:boxStrokeWidth="3dp"
+            android:layout_marginTop="16dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/tanggal"
+                android:inputType="date"
+                android:maxLines="1"
+                android:textColor="@color/fresh"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Tabungan"
+                android:id="@+id/pilih_tabungan"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tabungan_terpilih"
+                android:textColor="@color/default_text"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:id="@+id/submit"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+
+
+</ScrollView>
